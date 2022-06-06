@@ -18,19 +18,10 @@ use App\Http\Controllers\LoginController;
 Route::get('/', function () {
     return view('login');
 });
-// Route::post('/login', function () {
-//     return view('dashboard');
-// });
-// Route::post('/login', [LoginController::class,'checkLoginCredential'])->name('checkLoginCredential');
 Route::post('/create', [JourneyController::class,'create'])->name('create');
 Route::get('/create', [JourneyController::class,'create'])->name('create');
 Route::get('/dashboard',[JourneyController::class,'getJourney']);
 // Route::get('/dashboard',[JourneyController::class,'getApi']);
-// Route::get('/login', [JourneyController::class,'getJourney']);
-
-
-// Route::get('dashboard', [LoginController::class, 'dashboard']); 
 Route::get('login', [LoginController::class, 'index'])->name('login');
 Route::post('login', [LoginController::class, 'login'])->name('login'); 
 Route::get('signout', [LoginController::class, 'signOut'])->name('signout');
-// Route::get('/get_api', [JourneyController::class, 'getApi']);
